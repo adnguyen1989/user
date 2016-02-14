@@ -35,6 +35,10 @@ gem 'redis', '~> 3.0'
 gem "oj"
 gem "oj_mimic_json"
 
+gem 'bcrypt', '~> 3.1', '>= 3.1.10'
+
+gem 'email_validator', '~> 1.6'
+
 group :development do
   # https://github.com/myronmarston/mail_safe. prevent mails from being sent externally in development
   # mails sent to external addresses will be sent to the email address used in Git

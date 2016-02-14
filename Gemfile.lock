@@ -97,6 +97,7 @@ GEM
       tzinfo (~> 1.1)
     addressable (2.4.0)
     arel (7.0.0)
+    bcrypt (3.1.10)
     builder (3.2.2)
     byebug (8.2.2)
     choice (0.2.0)
@@ -109,6 +110,8 @@ GEM
       htmlentities (~> 4.3.3)
       launchy (~> 2.1)
       mail (~> 2.6.3)
+    email_validator (1.6.0)
+      activemodel
     erubis (2.7.0)
     factory_girl (4.5.0)
       activesupport (>= 3.0.0)
@@ -256,9 +259,11 @@ PLATFORMS
 
 DEPENDENCIES
   active_model_serializers (~> 0.10.0.rc4)
+  bcrypt (~> 3.1, >= 3.1.10)
   byebug
   database_cleaner (~> 1.5, >= 1.5.1)
   email_spec
+  email_validator (~> 1.6)
   factory_girl_rails
   ffaker
   figaro
