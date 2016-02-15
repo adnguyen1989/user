@@ -67,8 +67,8 @@ Environment setup *
 ===
 1. add RAILS_ENV=production to tasks like rake db or puma to specify the environment
 2. For production, need to create a user when running production locally
-  a. CREATE USER myapp WITH PASSWORD 'thepassword';
-  b. CREATE DATABASE myapp_development OWNER myapp;
+  a. CREATE USER rails_api_template_production WITH PASSWORD 'thepassword';
+  b. CREATE DATABASE rails_api_template_production OWNER rails_api_template_production;
   c. \q + Enter
 
 Reference

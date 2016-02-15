@@ -45,17 +45,4 @@ RSpec.describe User, type: :model do
     it { should validate_length_of(:last_name) }
     it { should validate_length_of(:password) }
     it { should have_secure_password }
-
-    it "validates for password when updating_password is true" do
-      old_password = @user_valid.password
-      subject { @user_valid }
-      allow(subject).to receive(:updating_password).and_return(true)
-      @user_valid.update(password: "short", password_confirmation: "short")
-      expect(@user_valid.password).to eql(old_password)
-    end
-
-    it "does not validate for password when updating_password is false" do
-      @user_valid.update(first_name: "new_username", updating_password: false)
-      expect(@user_valid.first_name).to eql("new_username")
-    end
 end

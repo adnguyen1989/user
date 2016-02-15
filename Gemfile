@@ -38,6 +38,14 @@ gem "oj_mimic_json"
 gem 'bcrypt', '~> 3.1', '>= 3.1.10'
 
 gem 'email_validator', '~> 1.6'
+#
+# gem 'mailgun-ruby', '~> 1.0', '>= 1.0.3', require: 'mailgun'
+gem 'mailgun_rails', '~> 0.8.0'
+# gem 'mandrill-api', '~> 1.0', '>= 1.0.53'
+#
+
+# https://github.com/itay-grudev/encryption
+gem 'encryption', '~> 1.1', '>= 1.1.7'
 
 group :development do
   # https://github.com/myronmarston/mail_safe. prevent mails from being sent externally in development
@@ -85,7 +93,7 @@ group :development, :test do
   gem "shoulda-matchers"
 
   # https://github.com/email-spec/email-spec
-  gem 'email_spec'
+  # gem 'email_spec'
 
   # code coverage
   gem 'simplecov', :require => false

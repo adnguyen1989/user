@@ -11,20 +11,15 @@ class User < ApplicationRecord
   validates :email, uniqueness: { case_sensitive: false }
   validates :email, presence: true, on: :create
 
-  validates :password, presence: true, if: :should_validate_password?
-  validates :password, length: { minimum: 6 }, if: :should_validate_password?
+  validates :password, presence: true, length: { minimum: 6 }, allow_nil: true
 
-  attr_accessor :updating_password
+  attr_accessor :current_password
 
   has_secure_password
 
   private
 
     # make this work later due to failing Rspec test
-    def should_validate_password?
-      updating_password || new_record?
-    end
-
     def generate_authentication_token!
       if !self.authentication_token
         begin
